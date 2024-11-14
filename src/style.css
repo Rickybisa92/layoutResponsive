@@ -1,62 +1,50 @@
 * {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
-    
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin: 16px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  gap: 8px;
 }
 
 .container-img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    margin: 8px;
-    border-radius: 12px;
+  width: 100%;                 
+  aspect-ratio: 1 / 1;         
+  border-radius: 12px;         /* Bordes redondeados */
+  object-fit: cover;  
 }
 
 @media (max-width: 599px) {
-    .container {
-      justify-content: center; 
-    }
 
-    .container-img {
-        width: 100%; /* Les imatges s'adapten a la mida de la finestra */
-        height: auto;
-      }
+  .container-img {
+    width: 100%;
+  }
 
 }
 
 @media (min-width: 600px) and (max-width: 839px) {
-    .container {
-      justify-content: center; /* Centra les imatges */
-    }
+  .container-img {
+        width: calc(50% - 4px); /* Ajuste para dos columnas con margen */
+  }
 
-    .container-img {
-        max-width: 300px;
-        max-height: 300px;
-    }
+}
+
+@media (min-width: 840px) {
+  .container {
+    justify-content: center;
+  }
+
+  .container-img {
+    width: calc(33.33% - 16px); /* 3 columnas, con margen entre ellas */
+    max-width: 300px;           /* Limita el ancho máximo de cada imagen */
+    height: 300px;
     
   }
 
-  @media (min-width: 840px) {
-    .container {
-     justify-content: center;
-    }
-
-    .container-img {
-        max-width: 300px;
-        max-height: 300px;
-    }
-
-  }
-  
+}
