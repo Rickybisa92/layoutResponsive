@@ -1,12 +1,14 @@
-* {
-  margin: 0;
-  padding: 0;
+body {
+  background: url(Catsss❤️_🔥❤️_🔥❤️_🔥.jpeg);
+  
 }
 
 .container {
 
   display: flex;
   flex-wrap: wrap;
+  max-width: 960px;
+  margin: 0 auto;
   justify-content: center;
   align-items: center;
   padding: 16px;
@@ -14,7 +16,7 @@
 }
 
 .container-img {
-  width: 100%;                 
+  max-width: 300px;                
   aspect-ratio: 1 / 1;         
   border-radius: 12px;         /* Bordes redondeados */
   object-fit: cover;  
@@ -30,21 +32,8 @@
 
 @media (min-width: 600px) and (max-width: 839px) {
   .container-img {
-        width: calc(50% - 4px); /* Ajuste para dos columnas con margen */
+        width: calc(50% - 16px); /* Ajuste para dos columnas con margen */
   }
 
 }
 
-@media (min-width: 840px) {
-  .container {
-    justify-content: center;
-  }
-
-  .container-img {
-    width: calc(33.33% - 16px); /* 3 columnas, con margen entre ellas */
-    max-width: 300px;           /* Limita el ancho máximo de cada imagen */
-    height: 300px;
-    
-  }
-
-}
