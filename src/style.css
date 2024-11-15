@@ -18,7 +18,7 @@ body {
 .container-img {
   max-width: 300px;             
   aspect-ratio: 1 / 1;         
-  border-radius: 12px;         /* Bordes redondeados */
+  border-radius: 12px;         
   object-fit: cover;  
 }
 
