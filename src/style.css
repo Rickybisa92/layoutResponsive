@@ -16,23 +16,31 @@ body {
 }
 
 .container-img {
-  max-width: 300px;                
+  max-width: 300px;             
   aspect-ratio: 1 / 1;         
   border-radius: 12px;         /* Bordes redondeados */
   object-fit: cover;  
 }
 
+
+/* Menos de 600px: Una columna */
 @media (max-width: 599px) {
-
   .container-img {
-    width: 100%;
+    width: 100%;              /* Ancho completo */
   }
-
 }
 
+/* Entre 600px y 839px: Dos columnas */
 @media (min-width: 600px) and (max-width: 839px) {
   .container-img {
-        width: calc(50% - 16px); /* Ajuste para dos columnas con margen */
+    width: calc(50% - 8px);   /* Cada imagen ocupa el 50% menos el margen */
+  }
+}
+
+/* Más de 840px: Tres columnas */
+@media (min-width: 840px) {
+  .container-img {
+    width: calc((100% - 2 * 8px) / 3); /* Cada imagen ocupa un tercio del ancho menos los márgenes */
   }
 
 }
